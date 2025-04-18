@@ -6,10 +6,19 @@ const app = express()
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv').config()
 
-app.use(cors({
+/*app.use(cors({
     origin: "http://localhost:3000", // Local frontend dev server
     credentials: true
-  }));
+  }));*/
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',    // Local development
+    'https://assignment-acrofix-ritesh.vercel.app'  // Vercel frontend
+  ],
+  credentials: true  // Allow credentials if you're using cookies or session-based auth
+};
+
+app.use(cors(corsOptions));
   
 app.use(express.json())
 
