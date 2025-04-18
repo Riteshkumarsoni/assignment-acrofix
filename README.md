@@ -3,6 +3,9 @@
 A full-stack web application for bulk ordering vegetables and fruits, built using **Node.js**, **React.js**, **JWT Authentication**, and **Neon.tech** (PostgreSQL).
 
 ---
+### admin credentials
+- useremail - ritul123@gmail.com
+- password - ritul@123
 ## Install all the dependencies
 - npm install
 
