@@ -20,7 +20,11 @@ class Home extends Component{
 
     getProducts = async () => {
         this.setState({apiStatus: apiConstants.in_progress})
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/products`)
+        //const response = await fetch(`${process.env.REACT_APP_API_URL}/products`)
+        const response = await fetch('https://assignment-acrofix.onrender.com/products',{
+            method: 'GET',
+            credentials: 'include'
+        })
         const fetchedData = await response.json()
         const updatedData = fetchedData.map(eachItem => ({
             productId: eachItem.product_id,

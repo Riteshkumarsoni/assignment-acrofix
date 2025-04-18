@@ -6,7 +6,11 @@ const app = express()
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv').config()
 
-app.use(cors())
+app.use(cors({
+    origin: "http://localhost:3000", // Local frontend dev server
+    credentials: true
+  }));
+  
 app.use(express.json())
 
 const {PGHOST,
