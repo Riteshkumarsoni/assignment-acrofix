@@ -1,0 +1,64 @@
+GET http://localhost:3000/showadmin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUml0dWwgS3VtYXIgU29uaSIsImVtYWlsIjoicml0dWwxMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJyaXR1bEAxMjMiLCJpYXQiOjE3NDQ4NjA2OTh9.wNWvmrZEBF17SAbF4ZvvcON6sM-9OR0AJDuXC4gYSzI
+###
+
+POST http://localhost:3001/admin-login
+Content-Type: application/json
+
+{
+    "useremail": "ritul13@gmail.com",
+    "userpassword": "ritul@123"
+}
+
+###
+
+POST http://localhost:3000/admin-signup
+Content-Type: application/json
+
+{
+    "name": "Ritul Kumar Soni",
+    "email": "ritul123@gmail.com",
+    "password": "ritul@123"
+}
+
+###
+
+GET http://localhost:3001/products
+
+###
+
+POST http://localhost:3000/add-product
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUml0dWwgS3VtYXIgU29uaSIsImVtYWlsIjoicml0dWwxMjNAZ21haWwuY29tIiwicGFzc3dvcmQiOiJyaXR1bEAxMjMiLCJpYXQiOjE3NDQ4NjA2OTh9.wNWvmrZEBF17SAbF4ZvvcON6sM-9OR0AJDuXC4gYSzI
+Content-Type: application/json
+
+{
+    "product_name": "",
+    "price_per_unit": 80,
+    "product_img_url": "https://m.media-amazon.com/images/I/311P1uv0ikL.jpg"
+}
+
+###
+
+delete http://localhost:3000/admin-delete/ritul123@gmail.com
+
+###
+
+POST http://localhost:3001/order/placed
+Content-Type: application/json
+
+{
+    "order_id": "hgfbgfjniehrf14g",
+    "product_id": 1,
+    "quantity": 2,
+    "buyer_name": "Mohit",
+    "contact_info": "8541278451",
+    "delivery_address": "Sultanpur, Uttar Pradesh",
+    "status": "In Progress"
+}
+
+###
+GET http://localhost:3001/show-order/c46494d9-136e-4536-91ca-d760b1c0e637
+
+###
+
+GET http://localhost:3001/show/allordered/product

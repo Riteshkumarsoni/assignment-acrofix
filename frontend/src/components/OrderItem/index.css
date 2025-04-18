@@ -1,0 +1,45 @@
+
+.order-item-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-id{
+    color: #000000;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.item-status{
+    
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.pending{
+    color: rgb(184, 21, 21);
+}
+
+.in-progress{
+    color: #08a5bd;
+}
+
+.delivered{
+    color: rgb(1, 167, 1);
+}
+
+.item-timestamp{
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 14px;
+    color: #323f4b;
+}
